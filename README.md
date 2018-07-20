@@ -20,4 +20,4 @@ This script uses two data inputs:
 The script goes through each point of the ATXsearch list, determines the nearest FD station, and uses
 Google Maps API to calculate the time of arrival. It accepts arguments for time of day and day of week, 
 and I used it to produce maps of times with high traffic congestion, i.e. Wednesday at 8AM and 5PM, etc.
-The data objects produced, as well as the maps, are in this repo.
+The data objects produced, as well as the map images, are in this repo.
