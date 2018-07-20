@@ -1,7 +1,7 @@
 # Code-portfolio
 This is a place to show what sort of code I write.
 
-# TwitterClassifier.py: This uses a neural network to attempt to classify the writer of text from two different Twitter users.
+### TwitterClassifier.py: This uses a neural network to attempt to classify the writer of text from two different Twitter users.
 It does the following:
 1. extracts Tweets from target users, 
 2. vectorizes those Tweets using NLTK,
@@ -10,7 +10,7 @@ Criticism of this code: I haven't had time to do a parameter grid-search, so pre
 training the network using parameters I found from a separate grid search. Regrettably, they don't
 work very well for this material, so while the code runs properly, it doesn't yet train a satisfying net.
 
-# FDlookup.py: This is a project I completed for Austin's city government. They needed to determine how many 
+### FDlookup.py: This is a project I completed for Austin's city government. They needed to determine how many 
 people were more than 8 minutes from the nearest fire department. I produced a CSV with coordinates, and 
 several images visualizing the results.
 This script uses two data inputs: 
