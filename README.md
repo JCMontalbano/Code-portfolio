@@ -6,7 +6,8 @@ It does the following:
 1. extracts Tweets from target users, 
 2. vectorizes those Tweets using NLTK,
 3. uses those vectors to train a TensorFlow neural network to distinguish between the two Tweet sources.
-Criticism of this code: I haven't had time to do a parameter grid-search, so presently it's 
+#### Criticism of this code: 
+I haven't had time to do a parameter grid-search, so presently it's 
 training the network using parameters I found from a separate grid search. Regrettably, they don't
 work very well for this material, so while the code runs properly, it doesn't yet train a satisfying net.
 
