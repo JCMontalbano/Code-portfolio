@@ -1,7 +1,7 @@
 #This python script will pull tweets from two twitter accounts, which it accepts
 #as arguments, write a brief report on the results, and then trains a neural net
 #to distinguish the two.
-#sample command: python3 NLTKproject.py realDonaldTrump DrJillStein reportfile.txt
+#sample command: python3 TwitterClassifier.py realDonaldTrump DrJillStein reportfile.txt
 import time
 import sys
 import pandas as pd
