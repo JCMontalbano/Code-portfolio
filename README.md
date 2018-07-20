@@ -6,10 +6,11 @@ It does the following:
 1. extracts Tweets from target users, 
 2. vectorizes those Tweets using NLTK,
 3. uses those vectors to train a TensorFlow neural network to distinguish between the two Tweet sources.
-#### Criticism of this code: 
-I haven't had time to do a parameter grid-search, so presently it's 
-training the network using parameters I found from a completely separate project. Regrettably, they don't
-work very well for this material, so while the code runs properly, it doesn't yet train a satisfying net.
+#### Performance: 
+In the first test, tasked with distinguishing tweets from Donald Trump's twitter feed from those in Jill Stein's,
+this script yielded network 'realDonaldTrump.DrJillStein.07202018.h5', with accuracy 0.6768, after 3 hours running
+the neural network training cycle. The script currently only goes to the point at which the network is generated;
+After this point there is a separate script to initiate the predictions and tests.
 
 ### FDlookup.py: This is a project I completed for Austin's city government. They needed to determine how many 
 people were more than 8 minutes from the nearest fire department. I produced a CSV with coordinates, and 
