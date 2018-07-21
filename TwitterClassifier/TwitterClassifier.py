@@ -51,6 +51,8 @@ targetlist1=GetTweets(target1)
 targetlist2=GetTweets(target2)
 
 #NLTK: vectorize tweets to 21 variables:
+#I wrote this as two simultaneous treatments instead of a single function, because it makes it easier 
+#to combine their results at different points in the function. See the single function version at the end of this file.
 
 #count words and ID 10 most frequent non-stop words in each corpus
 print('Counting most frequent words...')
@@ -256,3 +258,54 @@ print('Done at '+str(donetime)+' :D')
 
 #Add 5 top words for each target to the report
 #Append % True score to end of report
+'''
+#this is the function to Vectorize tweets, it needs a bit more work to replace the old code
+def VectorizeTweets(target,targetlist):
+	bigString=''
+	for tweet in targetlist:
+		bigString=bigString+' '+tweet
+	bigString = bigString.translate(str.maketrans('','',string.punctuation))
+	bigString = bigString.translate(str.maketrans('','','1234567890’“”'))
+	bigtoken=word_tokenize(bigString);prefilter=len(bigtoken)
+	bigtoken=[w for w in bigtoken if not w in stop_words]
+	nonstop=str(len(bigtoken)/prefilter).ljust(4)[:4]
+	print(target1+' is '+nonstop+' unique words.')
+	c=Counter(bigtoken)
+	c=c.most_common(10)
+	keywordlist=[]
+	for count in c1:
+	keywordlist.append(count[0])
+	print(target+' most common words:'+str(keywordlist))
+	open(reportfile,'a').write(target+' most common words:'+str(keywordlist)+'\n')	
+	#for each tweet in target1, then in target2:
+	VectorDF=pd.DataFrame(columns=['k0','k1','k2','k3','k4','k5','k6','k7','k8','k9','k10','k11','k12','k13','k14','k15','k16','k17','k18','k19','AvgLength','Target1'])
+	for tweet in targetlist1:
+		row=[]
+		wtoken=word_tokenize(tweet)
+		key0=(wtoken.count(keywordlist[0]))
+		key1=(wtoken.count(keywordlist[1]))
+		key2=(wtoken.count(keywordlist[2]))
+		key3=(wtoken.count(keywordlist[3]))
+		key4=(wtoken.count(keywordlist[4]))
+		key5=(wtoken.count(keywordlist[5]))
+		key6=(wtoken.count(keywordlist[6]))
+		key7=(wtoken.count(keywordlist[7]))
+		key8=(wtoken.count(keywordlist[8]))
+		key9=(wtoken.count(keywordlist[9]))
+		key10=(wtoken.count(keywordlist[10]))
+		key11=(wtoken.count(keywordlist[11]))
+		key12=(wtoken.count(keywordlist[12]))
+		key13=(wtoken.count(keywordlist[13]))
+		key14=(wtoken.count(keywordlist[14]))
+		key15=(wtoken.count(keywordlist[15]))
+		key16=(wtoken.count(keywordlist[16]))
+		key17=(wtoken.count(keywordlist[17]))
+		key18=(wtoken.count(keywordlist[18]))
+		key19=(wtoken.count(keywordlist[19]))
+		AvgLength= len(word_tokenize(tweet))/len(sent_tokenize(tweet)) #average sentence length, in words
+		row=[key0,key1,key2,key3,key4,key5,key6,key7,key8,key9,
+		key10,key11,key12,key13,key14,key15,key16,key17,key18,key19,AvgLength,1]
+		print(row)
+		VectorDF.loc[len(VectorDF)]=row
+	return VectorDF, keywordlist
+'''
