@@ -11,5 +11,5 @@ Produced the neural network neiltyson.SHAQ.07232018.h5 and the log file NeilShaq
 This version counts each tweet for 10 unique key words from each source (20 keywords total), and includes Vader sentiment analysis. It worked faster.
 
 #### Future features:
-* counter-filtering between the two lists.
+* counter-filtering between the two keyword lists.
 * post-training network performance validation on new data
