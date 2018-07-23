@@ -12,6 +12,7 @@ from tweepy.streaming import StreamListener
 import tweepy
 #Natural Language Processing:
 from nltk import word_tokenize, sent_tokenize
+from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import string
 from collections import Counter
 #Neural networks:
@@ -51,11 +52,10 @@ targetlist1=GetTweets(target1)
 targetlist2=GetTweets(target2)
 
 #NLTK: vectorize tweets to 21 variables:
-#I wrote this as two simultaneous treatments instead of a single function, because it makes it easier 
-#to combine their results at different points in the function. See the single function version at the end of this file.
 
 #count words and ID 10 most frequent non-stop words in each corpus
 print('Counting most frequent words...')
+
 bigString1=''
 for tweet in targetlist1:
 	bigString1=bigString1+' '+tweet
@@ -97,13 +97,35 @@ for count in c2:
 	keywordlist.append(count[0])
 	keywordlist2.append(count[0])
 
+#Add 10 top words for each target to the report
 print(target1+' most common words:'+str(keywordlist1))
 print(target2+' most common words:'+str(keywordlist2))
+open(reportfile,'a').write(target1+' most common words:'+str(keywordlist1)+'\n')
+open(reportfile,'a').write(target2+' most common words:'+str(keywordlist2)+'\n')
+
+sid = SentimentIntensityAnalyzer()
+def SentimentAnalyze(tweet):
+	sentences=sent_tokenize(tweet)
+	neulist=[];poslist=[];neglist=[];comlist=[]
+	for sentence in sentences:
+		ss = sid.polarity_scores(sentence)
+		neulist.append(ss['neu'])
+		poslist.append(ss['pos'])
+		neglist.append(ss['neg'])
+		comlist.append(ss['compound'])
+	#get average values
+	neu=sum(neulist)/len(neulist)
+	pos=sum(poslist)/len(poslist)
+	neg=sum(neglist)/len(neglist)
+	compound=sum(comlist)/len(comlist)
+	return(neg,pos,neu,compound)
+
 
 #for each tweet in target1, then in target2:
-VectorDF=pd.DataFrame(columns=['k0','k1','k2','k3','k4','k5','k6','k7','k8','k9','k10','k11','k12','k13','k14','k15','k16','k17','k18','k19','AvgLength','Target1'])
+VectorDF=pd.DataFrame(columns=['neg','pos','neu','compound','k0','k1','k2','k3','k4','k5','k6','k7','k8','k9','k10','k11','k12','k13','k14','k15','k16','k17','k18','k19','AvgLength','Target1'])
 for tweet in targetlist1:
 	row=[]
+	neg,pos,neu,compound=SentimentAnalyze(tweet)
 	wtoken=word_tokenize(tweet)
 	key0=(wtoken.count(keywordlist[0]))
 	key1=(wtoken.count(keywordlist[1]))
@@ -126,13 +148,14 @@ for tweet in targetlist1:
 	key18=(wtoken.count(keywordlist[18]))
 	key19=(wtoken.count(keywordlist[19]))
 	AvgLength= len(word_tokenize(tweet))/len(sent_tokenize(tweet)) #average sentence length, in words
-	row=[key0,key1,key2,key3,key4,key5,key6,key7,key8,key9,
+	row=[neg,pos,neu,compound,key0,key1,key2,key3,key4,key5,key6,key7,key8,key9,
 	key10,key11,key12,key13,key14,key15,key16,key17,key18,key19,AvgLength,1]
 	print(row)
 	VectorDF.loc[len(VectorDF)]=row
 
 for tweet in targetlist2:
 	row=[]
+	neg,pos,neu,compound=SentimentAnalyze(tweet)
 	wtoken=word_tokenize(tweet)
 	key0=(wtoken.count(keywordlist[0]))
 	key1=(wtoken.count(keywordlist[1]))
@@ -155,7 +178,7 @@ for tweet in targetlist2:
 	key18=(wtoken.count(keywordlist[18]))
 	key19=(wtoken.count(keywordlist[19]))
 	AvgLength= len(word_tokenize(tweet))/len(sent_tokenize(tweet)) #average sentence length, in words
-	row=[key0,key1,key2,key3,key4,key5,key6,key7,key8,key9,
+	row=[neg,pos,neu,compound,key0,key1,key2,key3,key4,key5,key6,key7,key8,key9,
 	key10,key11,key12,key13,key14,key15,key16,key17,key18,key19,AvgLength,0]
 	print(row)
 	VectorDF.loc[len(VectorDF)]=row
@@ -164,6 +187,9 @@ for tweet in targetlist2:
 #load NLTK vectors as a target array
 #select random 20% of array, 50% class balanced, load it as training data
 #train a network using parameters until you get a target threshold
+
+#save vectorized DF
+net_name=target1+'.'+target2+'.'+str(now)+'VectorDF.csv'
 DF=VectorDF
 targetcolumn='Target1'
 
@@ -226,7 +252,7 @@ while new_net==False:
 				model.save(net_name)
 				open(reportfile,'a').write('\nSaving '+net_name+' ')
 				now=datetime.datetime.now().strftime('%m/%d/%y %H:%M')
-				open(reportfile,'a').write(str(now)+'\t Dataset:'+str(sys.argv[1])+'\t SeriesID:'+seriesID+'\t Ratio:'+str(posnegratio)+'\t Accuracy:'+str(acc)+'\t'+'Layers:'+str(layerz)+' Nodes:'+str(nodez)+' DF length:'+str(len(trainDF)))
+				open(reportfile,'a').write(str(now)+'\t Accuracy:'+str(acc)+'\t'+'Layers:'+str(layerz)+' Nodes:'+str(nodez)+' DF length:'+str(len(trainDF)))
 			else: 
 				del model
 				trainDF=ClassBalance(VectorDF,ratio) #resample it
@@ -256,8 +282,9 @@ print('Done at '+str(donetime)+' :D')
 	#go through the rows side by side, if target1 = target1 pred, True
 	#take the % True as score
 
-#Add 5 top words for each target to the report
 #Append % True score to end of report
+
+
 '''
 #this is the function to Vectorize tweets, it needs a bit more work to replace the old code
 def VectorizeTweets(target,targetlist):
@@ -281,6 +308,7 @@ def VectorizeTweets(target,targetlist):
 	VectorDF=pd.DataFrame(columns=['k0','k1','k2','k3','k4','k5','k6','k7','k8','k9','k10','k11','k12','k13','k14','k15','k16','k17','k18','k19','AvgLength','Target1'])
 	for tweet in targetlist1:
 		row=[]
+		neg,pos,neu,compound=SentimentAnalyze(tweet)
 		wtoken=word_tokenize(tweet)
 		key0=(wtoken.count(keywordlist[0]))
 		key1=(wtoken.count(keywordlist[1]))
