@@ -1,0 +1,4 @@
+neiltyson most common words:['’', 'I', 'amp', 'The', '“', '”', 'Earth', 'A', 'If', 'would']
+SHAQ most common words:['RT', 'I', 'SHAQ', '’', 'u', 'amp', 'Shaq', 'The', 'get', 'new']
+
+Saved neiltyson.SHAQ.07232018.h5 07/23/18 12:18	 Accuracy:0.753894080997	Layers:20 Nodes:200 DF length:1284
