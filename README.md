@@ -11,6 +11,7 @@ It does the following:
 In the first test, tasked with distinguishing tweets from Donald Trump's twitter feed from those in Jill Stein's, this script yielded network 'realDonaldTrump.DrJillStein.07202018.h5', with accuracy 0.6768, after 3 hours running the neural network training cycle. The script currently only goes to the point at which the network is generated; After this point there is a separate script to initiate the predictions and tests.
 
 ### FDlookup.py:
+See the writeup at my blog here: http://www.eosmath.com/2018/06/fire-department-lookup-whos-within-8.html
 This is a project I completed for Austin's city government. They needed to determine how many people were more than 8 minutes from the nearest fire department. I produced a CSV with coordinates, and several images visualizing the results.
 This script uses two data inputs: 
 1. 'FD.csv', a list of lat/lon coordinates for Austin Fire Department stations
