@@ -1,5 +1,5 @@
 realDonaldTrump most common words:['I', '’', 'amp', 'The', 'great', 'RT', '“', '”', 'people', 'We']
 DrJillStein most common words:['RT', 'amp', 'The', 'GreenPartyUS', 'We', 'people', 'Green', 'US', 'Trump', 'I']
 
-Saved realDonaldTrump.DrJillStein.07202018.h5 07/20/18 02:10	Accuracy:0.678
+Saved realDonaldTrump.DrJillStein.07202018.h5 07/20/18 02:10	Accuracy:0.6768
 Layers:20 Nodes:200 
