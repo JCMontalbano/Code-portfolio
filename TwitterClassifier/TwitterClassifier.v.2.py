@@ -240,9 +240,9 @@ def TrainNet(TargetDF, layerz, nodez, epochs, activator, losser):
 	model.add(Dense(2,activation='softmax'))
 	model.compile(optimizer='adam',loss=losser, metrics=['accuracy'])
 	model_training=model.fit(predictors,target, epochs=epochs) #
-	acc=model_training.history['acc'] #how do i get just the last value?
+	acc=model_training.history['acc'] 
 	loss=model_training.history['loss']
-	acc=acc[-1]
+	acc=acc[-1] #only return the last value
 	return(model,acc) 
 
 #generate a dynamic neural network name:
