@@ -7,18 +7,18 @@ In the first picture, I wanted to assess the value of news stories in the format
 
 So I pulled the FANG stocks as a target group, over the month of July. **stockScrapeIEX.py** accepts a list of stocks as an argument, a delay value, a keyword, and start and end dates, so the command looks like:
 
-'''
+```
 python3 stockScrapeIEX.py JulyFANG 5 'FB AMZN NFLX GOOGL TWTR SNAP' '2018-07-01' '2018-08-06'
-'''
+```
 
 I then ran **compareVector.py** on the result, which just needed the keyword now:
 
-'''
+```
 python3 compareVector.py JulyFANG 
-'''
+```
 
 This produced image JulyFANG.png:
 !['JulyFANG Vectors'](https://raw.githubusercontent.com/JCMontalbano/Code-portfolio/master/NASDAQStudy/JulyFANG.png)
 
 ####Implications for future research:
-The most valuable part of this is the new metric. Separated from this code, I'd like to run it in a naive way over all the small groups, combinatorically, and identify groups which tend to move together over time. I like the way the image turned out, but this algorithm will scale well, and that's what's most valuable.
+The most valuable part of this is the new metric. Separated from this code, I'd like to run it in a naive way over all the small groups, combinatorically, and identify groups which tend to move together over time. I like the way the image turned out, but this algorithm will scale well into really massive treatments, and that's what's most valuable.
