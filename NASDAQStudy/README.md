@@ -19,6 +19,7 @@ python3 compareVector.py JulyFANG
 
 This produced image JulyFANG.png:
 !['JulyFANG Vectors'](https://raw.githubusercontent.com/JCMontalbano/Code-portfolio/master/NASDAQStudy/JulyFANG.png)
+
 On the days where the target tech stocks moved more together than apart, the day is highlighted with a brighter red bar. 
 * The red bars are darker proportional to the ratio of target movement to control movement, so on days when the whole market moved and the tech stocks moved in a way similar to it, the highlight is white.
 * This can be done over different timedeltas, of course, so you get these measures over week, month, year scales.
