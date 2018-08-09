@@ -30,4 +30,5 @@ The most valuable part of this is the new metric - I hadn't seen this done anywh
 
 #### Other target events:
 https://www.cnbc.com/2017/06/29/us-stocks-fall-tech-banks.html
+
 https://www.cnbc.com/2018/03/01/automaker-stocks-dive-on-steel-and-aluminum-tariffs-announcement.html
