@@ -26,7 +26,7 @@ On the days where the target tech stocks moved more together than apart, the day
 * I highlighted the dates based on the absolute value of the changes, so that it's red when it goes up or down. I considered doing it in different colors but thought it might be too busy, so this script is strictly focused on the metric of 'target values move together more than background values'.
 
 #### Implications for future research:
-The most valuable part of this is the new metric - I hadn't seen this done anywhere, so it was a pleasure to work out the math. Separated from this code, I'd like to run this metric over all the possible target groups, combinatorically, and identify groups which tend to move together over time. I like the way the image turned out, but this algorithm will scale well into really massive treatments, and that's what's most valuable to me.
+The most valuable part of this is the new metric - I hadn't seen this done anywhere, so it was a pleasure to work out the math. Separated from this code, I'd like to run this metric over all the possible target groups, combinatorically, and identify groups which tend to move together over time. I like the way the image turned out, but this algorithm will scale well into really massive treatments, and that's what's most interesting to me.
 
 #### Other target events:
 https://www.cnbc.com/2017/06/29/us-stocks-fall-tech-banks.html
