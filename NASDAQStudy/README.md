@@ -20,5 +20,5 @@ python3 compareVector.py JulyFANG
 This produced image JulyFANG.png:
 !['JulyFANG Vectors'](https://raw.githubusercontent.com/JCMontalbano/Code-portfolio/master/NASDAQStudy/JulyFANG.png)
 
-####Implications for future research:
+#### Implications for future research:
 The most valuable part of this is the new metric. Separated from this code, I'd like to run it in a naive way over all the small groups, combinatorically, and identify groups which tend to move together over time. I like the way the image turned out, but this algorithm will scale well into really massive treatments, and that's what's most valuable.
