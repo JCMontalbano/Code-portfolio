@@ -5,7 +5,7 @@ This was a project to detect when a group of prices moves together, relative to 
 
 In the first picture, I wanted to assess the value of news stories in the format '[group of stocks] plunge in response to [event]'. I found the following story: https://www.cnbc.com/2017/06/29/us-stocks-fall-tech-banks.html
 
-So I pulled the FANG stocks as a target group, over the month of July. **stockScrapeIEX.py** accepts a list of stocks as an argument, a delay value, a keyword, and start and end dates, so the command looks like:
+So I pulled the FANG stocks as a target group, over the month of July. **stockScrapeIEX.py** accepts a list of stocks as an argument, as well as a delay value, a keyword, and start and end dates, so the command looks like:
 
 ```
 python3 stockScrapeIEX.py JulyFANG 5 'FB AMZN NFLX GOOGL TWTR SNAP' '2018-07-01' '2018-08-06'
