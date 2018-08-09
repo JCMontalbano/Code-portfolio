@@ -1,11 +1,14 @@
 #python3 compareVector.py JulyFANG 
-import pandas as pd
 import sys
 import os
-import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
 import datetime as dt
+import matplotlib.pyplot as plt
+import matplotlib.lines as mlines
+import matplotlib.patches as mpatches
 import matplotlib.dates as mdates
+import matplotlib.ticker as mtick
 
 #output=sys.argv[1]
 output='JulyFANG'
@@ -56,6 +59,8 @@ plt.title('Change in target group \n'+str(list(targetDF.columns)[1:])+'\n relati
 # format the ticks
 plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%m/%d'))
 plt.gca().xaxis.set_major_locator(mdates.DayLocator())
+plt.gca().yaxis.set_major_formatter(mtick.PercentFormatter(1.0))
+
 
 maxRat=DF.VRatio.max()
 for row in DF.iterrows():
@@ -69,5 +74,13 @@ for column in targetDF.columns[1:]:
 	plt.plot(DF['date'],targetDF[column],color='black', linewidth=0.7)
 
 plt.xticks(rotation=90)
+
+target_line = mlines.Line2D([], [], color='black', linewidth=0.7, label='Target Vectors')
+control_line = mlines.Line2D([], [], color='grey', linewidth=7.0, label='Control Vectors')
+highlights = mpatches.Patch(color='red', label='target:control vector ratio')
+
+plt.legend(handles=[target_line,control_line,highlights])
+
 filename=output+'.png'
 plt.savefig(filename)
+plt.show()
