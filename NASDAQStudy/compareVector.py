@@ -1,4 +1,4 @@
-#python3 compareweights.py JulyFANG 
+#python3 compareVector.py JulyFANG 
 import pandas as pd
 import sys
 import os
