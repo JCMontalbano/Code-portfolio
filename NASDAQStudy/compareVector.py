@@ -10,8 +10,8 @@ import matplotlib.patches as mpatches
 import matplotlib.dates as mdates
 import matplotlib.ticker as mtick
 
-#output=sys.argv[1]
-output='JulyFANG'
+output=sys.argv[1]
+#output='JulyFANG'
 controloutput=str('control'+output+'.csv')
 targetoutput=str('target'+output+'.csv')
 if os.path.isfile(controloutput)==False:
