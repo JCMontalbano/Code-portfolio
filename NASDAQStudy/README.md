@@ -21,6 +21,7 @@ This produced image JulyFANG.png:
 !['JulyFANG Vectors'](https://raw.githubusercontent.com/JCMontalbano/Code-portfolio/master/NASDAQStudy/JulyFANG2.png)
 
 On the days where the target tech stocks moved more together than apart, the day is highlighted with a brighter red bar. 
+* red saturation = ratio of (target group average vector):(control group average vector)
 * The red bars are darker proportional to the ratio of target movement to control movement, so on days when the whole market moved and the tech stocks moved in a way similar to it, the highlight is white.
 * This can be done over different timedeltas, of course, so you get these measures over week, month, year scales.
 * I highlighted the dates based on the absolute value of the changes, so that it's red when it goes up or down. I considered doing it in different colors but thought it might be too busy, so this script is strictly focused on the metric of 'target values move together more than background values'.
