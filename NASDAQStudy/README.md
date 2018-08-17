@@ -25,6 +25,7 @@ On the days where the target tech stocks moved more together than apart, the day
 * The red bars are darker proportional to the ratio of target movement to control movement, so on days when the whole market moved and the tech stocks moved in a way similar to it, the highlight is white.
 * This can be done over different timedeltas, of course, so you get these measures over week, month, year scales.
 * I highlighted the dates based on the absolute value of the changes, so that it's red when it goes up or down. I considered doing it in different colors but thought it might be too busy, so this script is strictly focused on the metric of 'target values move together more than background values'.
+
 As you can see, the tech stocks did indeed have a bloodbath that Thursday, but so did the market generally, so the plunge wasn't as targeted toward FANG stocks specifcally. Its earlier plunge on the 14th, on the other hand, was specific to the tech stocks (as was the rebound on the following Monday, also highlighted).
 
 #### Implications for future research:
