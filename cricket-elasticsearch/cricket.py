@@ -338,7 +338,7 @@ for name in teamlist[1]:
 #initiate list of targets for the scorecard:
 targetlist=list(range(15,21));targetlist.append('B ')
 
-
+#begin actual game loop below:
 newGame=True
 while newGame==True:
 	ScoreDF=initiateScoreDF()
