@@ -31,6 +31,8 @@ python3 2.countersample.py rapid7 10000
 python3 3.vectorizeText.py rapid7 10000
 python3 4.trainClassifierNetwork.py rapid7 10000
 ```
+It would be trivial to refactor this code to run in a single lightweight script which ran start to finish without generating the intermediate data objects. 
+
 ## 0.recursivelinkscrape.py
 search rapid7 structure to gather 10,000 links:
 ```
