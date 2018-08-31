@@ -12,6 +12,7 @@
 #a single file, vectorOutput.
 import pandas as pd
 import sys
+import datetime
 #NLTK packages:
 from nltk import word_tokenize, sent_tokenize, ngrams, FreqDist
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -22,6 +23,7 @@ _KEY=sys.argv[1];_LIMIT=sys.argv[2]
 inScanName=str(_KEY)+'.'+str(_LIMIT)+'.scan.csv' #'scan' differentiates linklist from linklist with text included
 outScanName=str(_KEY)+'.'+str(_LIMIT)+'.outScan.csv'
 vectorOutput=str(_KEY)+'.'+str(_LIMIT)+'.vector.csv'
+reportfile='ClassifierLog.txt'
 
 #function for n<5 ngram counts
 def ngramList(corpus):
@@ -203,3 +205,9 @@ outTokenDF=tokenizeCorpus(outDF,1)
 vectorDF=pd.concat([inTokenDF,outTokenDF], axis=0)
 vectorDF.to_csv(vectorOutput)
 print('Done! '+vectorOutput+' saved.')
+now=datetime.datetime.now().strftime('%m/%d/%y %H:%M')
+open(reportfile,'a').write(str(now)+': Text vector complete for project '+vectorOutput+'\n')
+open(reportfile,'a').write('Most common 1grams:'+str(gram1)+'\n')
+open(reportfile,'a').write('Most common 2grams:'+str(gram2)+'\n')
+open(reportfile,'a').write('Most common 3grams:'+str(gram3)+'\n')
+open(reportfile,'a').write('Most common 4grams:'+str(gram4)+'\n')
