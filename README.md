@@ -1,12 +1,22 @@
 # Code-portfolio
 This is a place to show what sort of code I write.
 
+### phisherDetector
+It was suggested to me that I should write a method using natural language processing, recursive webpage scraping, and neural networks to automatically scan and distinguish two sets of websites. The result is a set of 5 interlocking scripts, a data pipeline which scrapes the target's web corpus recursively, repeats for a counter-sample of related links, tokenizes the differences in their writing, and then learns to distinguish between the two.
+I proposed the project as a procedural, scalable way to scan the internet for pages phishing the users of a given website. Once the distinguishing neural network is produced, it can distinguish any vectorized text automatically, flagging websites for review as potential phishing sites, for any web property.
+
+#### Performance:
+Instructed to find all networks starting from https://rapid7.com and including 'rapid7' in their link structure, and with a preset limit of 10,000 links, it found and successfully scanned 5384 in-network links and 1301 out-network links. The next script vectorized the text into 40 keywords, 4 sentiment analysis variables and sentence length in words. Trained on the resulting vector in Tensorflow with GPU acceleration, this produced the neural network 'rapid7.10000.h5', with accuracy 88.1%, (33.1% above chance) in 7 minutes of training. This process will absolutely scale into easy mass use.
+
+You can see the details of the keyword analysis, as well as the accuracy and completion time of the produced neural networks, in the logfile ClassifierLog.txt. The scripts, as well as the vector csv and neural network produced, are uploaded here. 
+
 ### TwitterClassifier: 
 This uses a neural network to attempt to classify the writer of text from two different Twitter users.
 It does the following:
 1. extracts Tweets from target users, 
 2. vectorizes those Tweets using NLTK,
 3. uses those vectors to train a TensorFlow neural network to distinguish between the two Tweet sources.
+
 #### Performance: 
 The first version, TwitterClassifier.v.1.py, was tasked with distinguishing tweets from Donald Trump's twitter feed from those in Jill Stein's. This script yielded network 'realDonaldTrump.DrJillStein.07202018.h5', with accuracy 0.6768, after 3 hours running the neural network training cycle. The script currently only goes to the point at which the network is generated; After this point there is a separate script to initiate the predictions and tests.
 
