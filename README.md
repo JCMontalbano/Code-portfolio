@@ -2,7 +2,11 @@
 This is a place to show what sort of code I write.
 
 ### phisherDetector
-It was suggested to me that I should write a method using natural language processing, recursive webpage scraping, and neural networks to automatically scan and distinguish two sets of websites. The result is a set of 5 interlocking scripts, a data pipeline which scrapes the target's web corpus recursively, repeats for a counter-sample of related links, tokenizes the differences in their writing, and then learns to distinguish between the two.
+It was suggested to me that I should write a method using natural language processing, recursive webpage scraping, and neural networks to automatically scan and distinguish two sets of websites. The result is a set of 5 interlocking scripts, a data pipeline which: 
+1. scrapes the target's web corpus recursively, 
+2. repeats for a counter-sample of related links, 
+3. tokenizes the differences in their writing, and then 
+4. trains a neural network to distinguish between the two.
 I proposed the project as a procedural, scalable way to scan the internet for pages phishing the users of a given website. Once the distinguishing neural network is produced, it can distinguish any vectorized text automatically, flagging websites for review as potential phishing sites, for any web property.
 
 #### Performance:
