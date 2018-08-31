@@ -10,8 +10,8 @@
 #train a network using parameters until you get a target accuracy threshold
 import sys
 import pandas as pd
-#Neural networks:
 import datetime
+#Neural networks:
 import time
 import keras
 from keras.layers import Dense
@@ -23,7 +23,7 @@ from keras.utils import to_categorical
 _KEY=sys.argv[1];_LIMIT=sys.argv[2] 
 vectorName=str(_KEY)+'.'+str(_LIMIT)+'.vector.csv'
 net_name=str(_KEY)+'.'+str(_LIMIT)+'.h5'
-reportfile='4.trainClassifierlog.txt'
+reportfile='ClassifierLog.txt'
 
 #########################
 #	HYPERPARAMETERS 	#
