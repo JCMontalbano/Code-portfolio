@@ -1,0 +1,2 @@
+
+Saved rapid7.10000.h5 08/31/18 02:45	 Accuracy:0.880988023952	Layers:25 Nodes:250 DF length:1336
