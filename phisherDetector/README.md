@@ -56,7 +56,7 @@ this script scans the visible text of the in-network links and saves it in the p
 ```
 python3 2.countersample.py rapid7 10000
 ```
-This script does the same text scan as in 1.recursiveTextScan.py, but now it is scanning the out-of-network links generated before.
+This script does the same text scan as in 1.recursiveTextScan.py, but now it is scanning the out-of-network links generated before. It also attempts to discover new outlinks recursively.
 
 ## 3.vectorizeText.py
 ```
