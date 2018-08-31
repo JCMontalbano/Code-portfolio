@@ -71,3 +71,6 @@ python3 4.trainClassifierNetwork.py rapid7 10000
 This script loads the vectorDF from 3.vectorizeText.py and then trains a neural net to distinguish the two, using TensorFlow and Keras. It cycles through a set of hyperparameters which I've found typically work for binary classifier problems like this.
 The script loads NLTK vectors produced in 3.vectorizeText.py as a target array.
 It selects a random 20% of array, 50% class balanced, loads it as training data, and trains a network. The neural network uses hyperparameters hardcoded at the beginning of the script, and has an adaptible accuracy threshold which can be set to slowly decrement target accuracy until you get a network at the target accuracy threshold.
+When it trains a neural network at the target accuracy, it saves it, logs it and ends.
+
+The next step is to point this neural network at the internet and start scanning for Rapid7 fakes.
