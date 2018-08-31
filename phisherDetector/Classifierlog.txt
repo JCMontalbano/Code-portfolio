@@ -1,0 +1,6 @@
+08/31/18 02:45: Text vector complete for project rapid7.10000.vector.csv08/31/18 03:44: Text vector complete for project rapid7.10000.vector.csvMost common 1grams:['full', 'Our', 'continue', 'purposes', 'Find', 'Orchestration', 'Certification', 'Training', '&', 'change']
+Most common 2grams:['Testing Komand', 'If you', 'full details', ', click', 'information or', ', including', 'Policy for', 'browse this', 'Analytics &', 'here .']
+Most common 3grams:['Metasploit Penetration Testing', 'Products All Products', 'Komand Orchestration &', 'cookies , including', 'or to change', 'Cookie Policy for', 'Penetration Testing IoT', 'Penetration Testing Komand', 'This site uses', 'change your cookie']
+Most common 4grams:['Penetration Testing IoT IoT', 'cookie settings , ,', 'agree to this this', 'for full details details', 'Phishing Simulation Metasploit Metasploit', 'For more information information', 'cookies , including including', 'Application Security InsightOps InsightOps', 'InsightAppSec Application Security Security', 'AGREE , LET LET']
+
+Saved rapid7.10000.h5 08/31/18 03:36	 Accuracy:0.880988023952	Layers:25 Nodes:250 DF length:1336
