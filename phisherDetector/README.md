@@ -44,7 +44,7 @@ The scraper also finds procedurally generated lists; we could probably procedura
 
 The next step with this data is in 1.recursiveTextScan.py, which collects the visible text from these links. You don't actually need to run script 0.recursivelinkscrape.py, but it runs much faster than 1.recursiveTextScan.py because it's not doing as much. This is a preliminary scan.
 
-This script preserves the outward-pointing link list as a procedurally generated csv the name from the procedurally generated outlink csv is used as a cue in the next stage, when I use the outlinks to pull a list of related ngrams as a counter-filter for the most common ngrams in the rapid7 site; this allows to avoid false positives on near-industry links by targeting word choices specific to the target company.
+This script preserves the outward-pointing link list as a procedurally generated csv. The name from the procedurally generated outlink csv is used as a cue in the next stage, when I use the outlinks to pull a list of related ngrams as a counter-filter for the most common ngrams in the rapid7 site; this allows to avoid false positives on near-industry links by targeting word choices specific to the target company.
 
 ## 1.recursiveTextScan.py
 ```
