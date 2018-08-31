@@ -8,9 +8,9 @@ Instructed to find all networks starting from https://rapid7.com and including '
 You can see the details of the keyword analysis, as well as the accuracy and completion time of the produced neural networks, in the logfile ClassifierLog.txt. The scripts, as well as the vector csv and neural network produced, are uploaded here. 
 
 ### Features:
-*The project keeps performance logs in ClassifierLog.txt
-*Filenames are dynamically generated with data objects at each step of the process.
-*The neural network's target accurcy thresholds can be readily tweaked with hardcoded variables.
+* The project keeps performance logs in ClassifierLog.txt
+* Filenames are dynamically generated with data objects at each step of the process.
+* The neural network's target accurcy thresholds can be readily tweaked with hardcoded variables.
 
 ### Implications for future research:
 * This project focused entirely on text vectors for analysis, but a phisher would also likely be using the targets proprietary imagery, css, and other website features as well. All of this can be vectorized and used to make the network smarter.
