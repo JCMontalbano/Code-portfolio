@@ -20,6 +20,7 @@ You can see the details of the keyword analysis, as well as the accuracy and com
 ### Implications for future research:
 * This project focused entirely on text vectors for analysis, but a phisher would also likely be using the targets proprietary imagery, css, and other website features as well. All of this can be vectorized and used to make the network smarter.
 * Detached from the recursive link scraper in parts 0-2, the code for vectorizing text and training a neural network to distinguish it is immediately applicable to the task of distinguishing *any* two bodies of text. Particularly this could be a new feature recognizing phishing emails.
+* Because the metasploit property is still presented partially as a separate brand from rapid7, this process missed the metasploit web structure. It can be easily modified to include multiple keywords in these instances.
 
 # Script chain:
 The entire chain can be run in a bash script as follows:
