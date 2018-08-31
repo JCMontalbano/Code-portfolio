@@ -25,7 +25,6 @@ You can see the details of the keyword analysis, as well as the accuracy and com
 # Script chain:
 The entire chain can be run in a bash script as follows:
 ```
-python3 0.recursivelinkscrape.py https://rapid7.com rapid7 10000 
 python3 1.recursiveTextScan.py https://rapid7.com rapid7 10000
 python3 2.countersample.py rapid7 10000
 python3 3.vectorizeText.py rapid7 10000
