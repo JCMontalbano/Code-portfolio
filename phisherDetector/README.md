@@ -17,6 +17,14 @@ You can see the details of the keyword analysis, as well as the accuracy and com
 * Detached from the recursive link scraper in parts 0-2, the code for vectorizing text and training a neural network to distinguish it is immediately applicable to the task of distinguishing *any* two bodies of text. Particularly this could be a new feature recognizing phishing emails.
 
 # Script chain:
+The entire chain can be run in a bash script as follows:
+```
+python3 0.recursivelinkscrape.py https://rapid7.com rapid7 10000 
+python3 1.recursiveTextScan.py https://rapid7.com rapid7 10000
+python3 2.countersample.py rapid7 10000
+python3 3.vectorizeText.py rapid7 10000
+python3 4.trainClassifierNetwork.py rapid7 10000
+```
 ## 0.recursivelinkscrape.py
 search rapid7 structure to gather 10,000 links:
 ```
