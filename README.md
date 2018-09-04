@@ -25,7 +25,7 @@ It does the following:
 #### Performance: 
 The first version, TwitterClassifier.v.1.py, was tasked with distinguishing tweets from Donald Trump's twitter feed from those in Jill Stein's. This script yielded network 'realDonaldTrump.DrJillStein.07202018.h5', with accuracy 0.6768, after 3 hours running the neural network training cycle. The script currently only goes to the point at which the network is generated; After this point there is a separate script to initiate the predictions and tests.
 
-I updated the code to TwitterClassifier.v.2.py, which expanded the keyword lists and also includes Vader sentiment analysis, and targeted Shaquille O'Neal and Neal DeGrasse Tyson. It learned much more quickly, producing 'neiltyson.SHAQ.07232018.h5' with accuracy 0.754 within ten minutes.
+I updated the code to TwitterClassifier.v.2.py, which expanded the keyword lists and also includes Vader sentiment analysis, and targeted Shaquille O'Neal and Neil DeGrasse Tyson. It learned much more quickly, producing 'neiltyson.SHAQ.07232018.h5' with accuracy 0.754 within ten minutes.
 
 ### FDlookup:
 See the writeup at my blog here: http://www.eosmath.com/2018/06/fire-department-lookup-whos-within-8.html
