@@ -10,15 +10,15 @@ It was suggested to me that I should write a method using natural language proce
 
 I proposed the project as a procedural, scalable way to scan the internet for pages phishing the users of a given website. Once the distinguishing neural network is produced, it can distinguish any vectorized text automatically, flagging websites for review as potential phishing sites, for any web property.
 
-### cricket-elasticsearch:
-As part of an interview process I was given a code challenge to write a scoring system for the dart game Cricket, which included detailed application of the rules, supported variable teams, variable text inputs, and runs a little local elasticsearch server to keep player records, and reference them in-game. I like it because it's a single script which is a self-contained network of interlocking functions, which are only able to generate data and outputs they can handle. It simulates the dart game 'Cricket', which was new to me, so I figured it out by watching this video: https://www.youtube.com/watch?v=odKhntmqiHw&t
-
-It runs an elasticsearch server to record names of previous users, and wins and losses. When it first runs it auto-populates the server like an old-school arcade game, displaying a list of 'Top Three Cricket Masters' at the beginning, and then if you rack up the wins you can get on that list too. The server is persistent on your own machine, so you can close the python program and come back to find your old character data still there.
-
 #### Performance:
 Set to recursively scrape links starting from https://rapid7.com and including 'rapid7' in their link structure, and with a preset limit of 10,000 links, it found and successfully scraped visible text from 5384 in-network links and 1301 out-network links. The next script vectorized the text into 40 keywords, 4 sentiment analysis variables and sentence length in words. Trained on the resulting vector in Tensorflow with GPU acceleration, this produced the neural network 'rapid7.10000.h5', with accuracy 88.1%, (38.1% above chance) in 7 minutes of training. This process is meant to be a general use tool, which should work for any client website.
 
 You can see the details of the keyword analysis, as well as the accuracy and completion time of the produced neural networks, in the logfile ClassifierLog.txt. The scripts, as well as the vector csv and neural network produced, are uploaded here. 
+
+### cricket-elasticsearch:
+As part of an interview process I was given a code challenge to write a scoring system for the dart game Cricket, which included detailed application of the rules, supported variable teams, variable text inputs, and runs a little local elasticsearch server to keep player records, and reference them in-game. I like it because it's a single script which is a self-contained network of interlocking functions, which are only able to generate data and outputs they can handle. It simulates the dart game 'Cricket', which was new to me, so I figured it out by watching this video: https://www.youtube.com/watch?v=odKhntmqiHw&t
+
+It runs an elasticsearch server to record names of previous users, and wins and losses. When it first runs it auto-populates the server like an old-school arcade game, displaying a list of 'Top Three Cricket Masters' at the beginning, and then if you rack up the wins you can get on that list too. The server is persistent on your own machine, so you can close the python program and come back to find your old character data still there.
 
 ### TwitterClassifier: 
 This uses a neural network to attempt to classify the writer of text from two different Twitter users.
