@@ -21,7 +21,7 @@ This was a project to detect when a group of prices moves together, relative to 
 **compareVector.py** accepts the CSVs from above, analyzes them, and produces an image file comparing them with a novel metric. It highlights each day with a vertical red bar, whose color saturation is determined by the ratio of (target group average vector):(control group average vector). This produces a direct visual measure of when a group of stocks is moving together relative to the market.
 
 ### RideAustinPolynomial:
-PolynomialWeekly.ipynb is a Jupyter Notebook analysis of RideAustin's daily ride request volume, identifying a weekly cycle. The data released covers rides requested from June 16 to August 31, just over 11 weeks. It shows a clear cycle weekly, typically with peak ride demand on Saturday. I model this cycle as a spliced set of 7 polynomial curve fits and achieve close fit.
+PolynomialWeekly.ipynb is a Jupyter Notebook analysis of RideAustin's daily ride request volume, identifying a weekly cycle. The data released covers rides requested from June 16 to August 31, just over 11 weeks. It shows a clear cycle weekly, with peak ride demand on Saturday. I model this cycle as a spliced set of 7 polynomial curve fits and achieve close fit.
 
 ### cricket-elasticsearch:
 I was given a code challenge to write a scoring system for the dart game Cricket, which included detailed application of the rules, supported variable teams, variable text inputs, and runs a little local elasticsearch server to keep player records, and reference them in-game. I like it because it's a single script which is a self-contained network of interlocking functions, which are only able to generate data and outputs they can handle.
