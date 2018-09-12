@@ -2,5 +2,6 @@ PolynomialWeekly.ipynb is a Jupyter Notebook analysis of RideAustin's daily ride
 
 PolynomialWeekly.png is the punchline, an image of the resulting model compared to real data.
 !['The punchline:'](https://raw.githubusercontent.com/JCMontalbano/Code-portfolio/master/RideAustinPolynomial/PolynomialWeekly.png)
+
 RideVolume.csv is drawn from public Ride|Austin data at data.world:
 https://data.world/ride-austin/austin-weather-june-2-2016-april-13-2017
