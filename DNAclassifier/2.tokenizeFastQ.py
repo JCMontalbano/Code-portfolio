@@ -59,7 +59,7 @@ def tokenizeSamples(fastFile,howManyReads,targetlist,whichSample):
 			print(row)
 			print('Counting reads, '+str(percentstring)+' complete')
 		if depth!=0: #if depth is limited, break at the limit
-			if readCount>=(depth/1000):break
+			if (readCount/1000)>=(depth/1000):break
 
 def tokenizeDNARead(targetString,mList):
 	#count this read for each in the motif list
