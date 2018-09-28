@@ -1,5 +1,5 @@
 #Example call:
-#long: python3 3.trainDNAClassifier.py ecoli.paerug.full.csv ecoli.paerug.h5
+#long: python3 3.trainDNAClassifier.py ecoli.paerug.25k.csv ecoli.paerug.h5
 
 #This script takes 2 variables: 
 #Arg1: tokenized reads from 2.tokenizeFastQ.py
@@ -83,9 +83,15 @@ def TrainNet(TargetDF, layers, nodes, epochs, activator, losser):
 ##############################
 #operating code begins below:#
 ##############################
+vectorName=sys.argv[1];net_name=sys.argv[2]
 
 VectorDF=pd.read_csv(vectorName)
 targetcolumn='sample' #which corpus it came from? Line 102 in 2.tokenizeFastQ.py
+
+print('Good luck!')
+trainDF=ClassBalance(VectorDF,ratio) #class balance it, instance a new DF for this run
+dropratio=0
+new_net=False
 
 while new_net==False:
 	for layerz in layerzlist:
