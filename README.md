@@ -1,6 +1,15 @@
 # Code-portfolio
 This is a place to show what sort of code I write. I also did the analysis at https://ridemap.ai
 
+### DNAclassifier
+I combined NLP classifier code with bioinformatics code, to identify recurring DNA motifs in reference genomes and train a neural network to classify between the two samples.
+
+1. 1.learnMotifs.py studies two reference genomes and identifies the top 100 recurring motifs, at specified lengths
+2. 2.tokenizeFastQ.py works for fastA or fastQ raw data formats, and tokenizes it using the motifs from 1
+3. 3.trainDNAclassifier.py accepts the tokenized data from 2 and trains a neural network to classify between the two.
+
+This gives a procedural, scalable data pipeline which can automatically identify microbial samples right from the Illumina machine.
+
 ### phisherDetector
 It was suggested to me that I should write a method using natural language processing, recursive webpage scraping, and neural networks to automatically scan and distinguish two sets of websites. The result is a set of 5 interlocking scripts, a data pipeline which: 
 1. scrapes the target's web corpus recursively, 
