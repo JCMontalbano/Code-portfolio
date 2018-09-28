@@ -42,7 +42,7 @@ Learn the recurring motifs from single-line FNA. The first two arguments are for
 ```
 python3 2.tokenizeFastQ.py ecolimotifs1020.csv paerugmotifs1020.csv Ecoli.FLX.fna paerug1.fastq ecoli.paerug.full.csv 0
 ```
-Tokenize the raw data inputs, using the motif lists from part 1. The raw data used here is from the [Qiagen sample data site](https://www.qiagenbioinformatics.com/support/example-data/). Because individual raw data reads are quite short (~100-300 base-pairs), this script combines 1,000 reads before tokenizing, which yields robust feature counts.
+Tokenize the raw data inputs, using the motif lists from part 1. The raw data used here is from the [Qiagen sample data site](https://www.qiagenbioinformatics.com/support/example-data/). Because individual raw data reads are quite short (~100-300 base-pairs), this script combines 1,000 reads before tokenizing, which yields robust feature counts. The last variable is an integer which determines how many reads to test.
 
 ## 3.trainDNAClassifier.py
 ```
