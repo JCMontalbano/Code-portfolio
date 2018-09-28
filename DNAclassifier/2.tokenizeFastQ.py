@@ -53,7 +53,7 @@ def tokenizeSamples(fastFile,howManyReads,targetlist,whichSample):
 			row=tokenizeDNARead(CombinedReadString, targetlist)
 			#row2=tokenizeDNARead(reverse, targetlist)
 			#row=[x+y for x,y in zip(row1,row2)] #produces 1 row for direct and reverse combined
-			row.append(whichSample) #tags the row with the source, for training
+			row.append(int(whichSample))  #tags the row with the source, for training
 			VectorDF.loc[len(VectorDF)]=row 
 			percentcomplete=(readCount/howManyReads);percentstring='{:%}'.format(percentcomplete)
 			print(row)
