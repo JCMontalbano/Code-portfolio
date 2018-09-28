@@ -7,6 +7,9 @@ I combined NLP classifier code with bioinformatics code, to identify recurring D
 
 This gives a procedural, scalable data pipeline which can automatically identify microbial samples right from the Illumina machine.
 
+### Performance:
+At the end of the process, the script produced a network predicting with 100% accuracy on the first try. This was run on a truncated sample though - only 50 total runs, to save time - so overfitting is a possibility here. The produced neural network, ecoli.paerug.h5, distinguishes Escherica coli from Pseudomonas aeruginosa raw samples.
+
 ### Features:
 * The motif search can be run ahead of time, using reference data from [NCBI's ftp database](https://tinyurl.com/bacteriagenomes).
 * Motif base-pair length, sample depth, and the neural network's target accurcy thresholds can be readily tweaked with hardcoded variables.
