@@ -8,9 +8,9 @@ I combined NLP classifier code with bioinformatics code, to identify recurring D
 This gives a procedural, scalable data pipeline which can automatically identify microbial samples right from the Illumina machine.
 
 ### Features:
-* The motif search can be run ahead of time, using reference data from [NCBI's ftp database](https://tinyurl.com/bacteriagenomes)
+* The motif search can be run ahead of time, using reference data from [NCBI's ftp database](https://tinyurl.com/bacteriagenomes).
 * Motif base-pair length, sample depth, and the neural network's target accurcy thresholds can be readily tweaked with hardcoded variables.
-* The code can be adapted to distinguish between more than 2 types of bacteria sample, and give partial reads from several reference datasets, to identify transgenic genomes
+* The code can be adapted to distinguish between more than 2 types of bacteria sample, and give partial reads from several reference datasets, to identify transgenic genomes.
 
 ### Implications for future development:
 * We should run the motif searches ahead of time to develop a large library, and set of front-end tools
