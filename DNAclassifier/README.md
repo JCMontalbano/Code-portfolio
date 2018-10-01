@@ -18,7 +18,6 @@ At the end of the process, the script produced a network predicting with 100% ac
 ### Implications for future development:
 * We should run the motif searches ahead of time to develop a large library, and set of front-end tools
 * The pipeline presently only runs up to the training of the network, but it needs at least one more script to test new data.
-* Because the Metasploit product is still presented partially as a separate brand from rapid7, 'rapid7' isn't found in its links, meaning this process missed the Metasploit web structure. It can be easily modified to include multiple keywords in these instances.
 
 # Script chain:
 Before using the .fna files from the reference set, they must be reduced to a single line, using the following bash code:
