@@ -1,5 +1,6 @@
 # Code-portfolio
 This is a place to show what sort of code I write. I also did the analysis and pipelines at https://ridemap.ai
+
 To see how I write prose, see my blog: http://www.eosmath.com/
 
 ### DNAclassifier
