@@ -5,3 +5,6 @@ PolynomialWeekly.png is the punchline, an image of the resulting model compared 
 
 RideVolume.csv is drawn from public Ride|Austin data at data.world:
 https://data.world/ride-austin/austin-weather-june-2-2016-april-13-2017
+
+See blog post here: [Modeling a polynomial curve fit over data sliced for its cyclical occurrences allows a tight projection across those cycles
+](http://www.eosmath.com/2017/06/modeling-polynomial-curve-fit-over-data.html)
