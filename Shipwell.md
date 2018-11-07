@@ -13,7 +13,7 @@ I've already implemented a mathematically similar solution at [Ridemap](https://
 
 **For a great little animation explaining the K-means cluster algorithm (0:59), click here:** [k-means clustering](https://www.youtube.com/watch?v=5I3Ei69I40s). This unsupervised algorithm identifies naturally occuring centers in data, and works well in lat/lon context. 
 
-**For an example of using k-means clusters to successfully predict stochastic demand centers from a historical record, see our white paper here:** [K-Means Clustering of Rideshare providers leads to better performance; how an Austin startup can compete with the giants using machine learning
+**For an example of using k-means clusters to successfully predict stochastic demand centers from a historical record, see Ridemap's white paper here:** [K-Means Clustering of Rideshare providers leads to better performance; how an Austin startup can compete with the giants using machine learning
 ](http://www.eosmath.com/2017/06/k-means-clustering-of-rideshare.html)
 
 ### Modeling your data in this way allows the following features:
