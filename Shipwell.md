@@ -1,6 +1,7 @@
 We can compete well with other 3PLs by solving for the KPIs of the shippers and the truckers. Truckers want to maximize income per mile driven, while satisfying requirements like the 80/7 rule; shippers want to minimize cost per mile while satisfying time requirements. If we analyze your event data for recurring cycles - i.e. weekly, monthly, seasonal and yearly recurring trends in demand, we can model the demand across our grid.
 
 For a working iPython notebook of my code modeling a weekly trend in a single variable, see here: [RideAustinPolynomial](https://github.com/JCMontalbano/Code-portfolio/tree/master/RideAustinPolynomial)
+
 For a writeup modeling and visualizing a daily trend from historical data in a datetime and latitude/longitude context, see here: 
 [Ride|Austin Saturday Traffic Distribution](http://www.eosmath.com/2017/05/rideaustin-saturday-traffic-distribution.html)
 
@@ -9,8 +10,8 @@ Having identified time and geospatial trends in your shipping data, we can predi
 I've already implemented a mathematically similar solution at [Ridemap](https://ridemap.ai). Ridemap's map is a 6D histogram of historical rideshare data, displayed as a heatmap sliced for current time and date, where two dimensions are lat/lon, and three are positions in the time cycles. The 'auto-navigate' feature is a weighted k-means cluster implemented in React for Android and iOS. Shipwell doesn't need to implement it in the mobile app, but since React is in Java, it implies we can easily implement it in Java or even C, depending on what Shipwell's servers run. I've also written it in Python. 
 
 For a great little animation explaining the K-means cluster algorithm (0:59), click here:
-[k-means clustering](https://www.youtube.com/watch?v=5I3Ei69I40s)
-This unsupervised algorithm identifies naturally occuring centers in data, and works well in lat/lon context. 
+[k-means clustering](https://www.youtube.com/watch?v=5I3Ei69I40s). This unsupervised algorithm identifies naturally occuring centers in data, and works well in lat/lon context. 
+
 For an example of using k-means clusters to successfully predict stochastic demand centers from a historical record, see here:
 [K-Means Clustering of Rideshare providers leads to better performance; how an Austin startup can compete with the giants using machine learning
 ](http://www.eosmath.com/2017/06/k-means-clustering-of-rideshare.html)
