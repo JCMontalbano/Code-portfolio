@@ -5,7 +5,7 @@ We can compete well with other 3PLs by solving for the KPIs of the shippers and 
 **For a working iPython notebook of my code using curve-fitting to model a weekly trend in a single variable, see here:** [RideAustinPolynomial](https://github.com/JCMontalbano/Code-portfolio/tree/master/RideAustinPolynomial). This technique should be applied to individual shippers, and to industries broadly, to predict demand. This demand can then be modeled geospatially using the historical points of shipping origin for those industries, as well as specific histories of those points of origin.
 
 **For a writeup modeling and visualizing a daily trend from historical data in a datetime and latitude/longitude context, see here:** 
-[Ride|Austin Saturday Traffic Distribution](http://www.eosmath.com/2017/05/rideaustin-saturday-traffic-distribution.html)
+[Ride|Austin Saturday Traffic Distribution](http://www.eosmath.com/2017/05/rideaustin-saturday-traffic-distribution.html). This density demand map of the city, shifting with time, allows for geospatial, time-specific predictions of future demand.
 
 Having identified time and geospatial trends in your shipping data, we can predict (with some uncertainty) the future value of a trucker's position at the end of their transit time. This allows us to route truckers toward positions which will keep them working on the next job or back haul. We can then direct our trucks toward regions which have a large number of possible or likely jobs, even before we've received orders for these jobs. If truckers can count on your 3PL to route them toward reliable work, they can neglect other 3PLs, and we acquire a larger workforce to offer our shippers, which in turn improves the performance we can offer to them. 
 
