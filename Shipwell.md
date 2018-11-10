@@ -1,4 +1,4 @@
-## Shipwell Predictive Routing Research & Development Proposal:
+## 3PL Predictive Routing Research & Development Proposal:
 
 We can compete well with other 3PLs by solving for the KPIs of the shippers and the truckers. Truckers want to maximize income per mile driven, while satisfying requirements like the 80/7 rule; shippers want to minimize cost per mile while satisfying time requirements. If we analyze your event data for recurring cycles - i.e. weekly, monthly, seasonal and yearly recurring trends in demand, we can model the demand geospatially across our grid. With a map of future demand, we can improve our service in several ways.
 
