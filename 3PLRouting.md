@@ -2,7 +2,7 @@
 
 We can compete well with other 3PLs by solving for the KPIs of the shippers and the truckers. Truckers want to maximize income per mile driven, while satisfying requirements like the 80/7 rule; shippers want to minimize cost per mile while satisfying time requirements. If we analyze your event data for recurring cycles - i.e. weekly, monthly, seasonal and yearly recurring trends in demand, we can model the demand geospatially across our grid. By predicting where demand will be ahead of time, we can incentivize our freight carriers to move their trucks to our high demand areas, maximizing our drayage on offer to our shippers.
 
-**For a working iPython notebook of my code using curve-fitting to model a weekly trend in a single variable, see here:** [RideAustinPolynomial](https://github.com/JCMontalbano/Code-portfolio/tree/master/RideAustinPolynomial)
+**For a working iPython notebook of my code using curve-fitting to model a weekly trend in a single variable, see here:** [RideAustinPolynomial](https://github.com/JCMontalbano/Code-portfolio/tree/master/RideAustinPolynomial). This technique should be applied to individual shippers, and to industries broadly, to predict demand. This demand can then be modeled geospatially using the historical points of shipping origin for those industries, as well as specific histories of those points of origin.
 
 **For a writeup modeling and visualizing a daily trend from historical data in a datetime and latitude/longitude context, see here:** 
 [Ride|Austin Saturday Traffic Distribution](http://www.eosmath.com/2017/05/rideaustin-saturday-traffic-distribution.html)
