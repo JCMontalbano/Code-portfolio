@@ -1,7 +1,7 @@
 # Code-portfolio
 This is a place to show what sort of code I write. I also did the analysis and pipelines at https://ridemap.ai
 
-To peruse my prose, see my blog: http://www.eosmath.com/
+For data visualizations in QGIS, see my blog: http://www.eosmath.com/
 
 ### DNAclassifier
 I combined NLP classifier code with bioinformatics code, to identify recurring DNA motifs in reference genomes and train a neural network to classify between the two samples.
