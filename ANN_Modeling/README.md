@@ -1,0 +1,1 @@
+The primary feature of this repo is the analysis at model.ipynb. It's a Jupyter Notebook which ingests a dataset, models a problem, and refines artificial neural networks until it's got a working model of the problem.
